@@ -1,0 +1,11 @@
+<h1>searching for '<%= params[:search] %>'</h1>
+
+<% if @data.empty? %>
+  <h1>no results found</h1>
+<% end %>
+
+<% @data.each do |s| %>
+  <%= s.name %>
+  <%= s.price %>
+  <%= s.created_at %><br>
+<% end %>
